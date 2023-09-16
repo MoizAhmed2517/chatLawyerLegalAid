@@ -1,9 +1,13 @@
 *{
   margin: 0;
   padding: 0;
+  font-family: 'Lato', 'Oxygen', sans-serif;
+  font-family: 'Raleway', sans-serif;
   
 }
 
 .bannerDark {
   background-color: #070509;
 }
+
+
