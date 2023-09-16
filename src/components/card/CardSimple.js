@@ -6,7 +6,7 @@ const CardSimple = (props) => {
     <Box sx={{ 
         p: 3,
         height: 'auto',
-        background: '#222217',
+        background: '#080804',
         border: '1px solid #585724',
         borderRadius: '10px',
         '&:hover': {

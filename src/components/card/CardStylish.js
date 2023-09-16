@@ -16,7 +16,7 @@ const CardStylish = (props) => {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        background: '#222217'
+                        background: '#080804'
                     }}>
                         {props.icon}
                     </Box>

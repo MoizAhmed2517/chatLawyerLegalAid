@@ -38,13 +38,21 @@ function ElevationScroll(props) {
     window: PropTypes.func,
   };
 
-const pages = ['About Us', 'Product Showcase', 'Why Choose Us?', 'Pricing', 'Live Demo', 'Contact Us'];
+const pages = [
+  {label: 'About Us', to: '/about-us'},
+  {label: 'Why Choose Us?', to: '/why-choose-us'},
+  {label: 'Product Showcase', to: '/product-showcase'},
+  {label: 'Pricing', to: '/pricing'},
+  {label: 'Live Demo', to: '/live-demo'},
+  {label: 'Contact Us', to: '/contact-us'},
+];
 
 const Navbar = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [scrolled, setScrolled] = useState(false);
-  const [click, setClick] = useState(-1);
+  const currentTabIndex = pages.findIndex(page => page.to === window.location.pathname);
+  const [click, setClick] = useState(currentTabIndex !== -1 ? currentTabIndex : -1);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -92,8 +100,8 @@ const Navbar = (props) => {
             {/* App bar main icon -- desktop */}
             <Typography
                     variant="h5"
-                    component={Link}
-                    to="/"
+                    component="a"
+                    href="/"
                     noWrap
                     sx={{
                     ml: 8,
@@ -103,6 +111,7 @@ const Navbar = (props) => {
                     letterSpacing: '.2rem',
                     color: `${props.mainColor}`,
                     textDecoration: 'none',
+                    px: {xs: 'none', xl: 10}
                 }}
             >
                 CHATBOT LOGO
@@ -114,8 +123,10 @@ const Navbar = (props) => {
                     <Button
                       onClick={() => handleTabNavMenu(index)}
                       sx={{ color: 'white', display: 'block', borderBottom: click === index ? '1px solid yellow' : 'none', borderRadius: '0px' }}
+                      component={Link} 
+                      to={page.to}
                     >
-                      <Typography variant="body1" sx={{ textTransform: 'capitalize', fontSize: 14, }}>{page}</Typography>
+                      <Typography variant="body1" sx={{ textTransform: 'capitalize', fontSize: 14, }}>{page.label}</Typography>
                     </Button>
                   </React.Fragment>
               ))}
@@ -124,8 +135,8 @@ const Navbar = (props) => {
             {/* App bar main icon -- mobile */}
             <Typography
               variant="h5"
-              component={Link}
-              to="/"
+              component="a"
+              href="/"
               noWrap
               sx={{
                 ml: 2,
@@ -172,15 +183,15 @@ const Navbar = (props) => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                {pages.map((page, index) => (
+                  <MenuItem key={index} onClick={handleCloseNavMenu} component={Link} to={page.to}>
+                    <Typography textAlign="center">{page.label}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
 
-            <Box sx={{ marginLeft: 'auto', display:{ xs: 'none', md: 'block' } }}>
+            <Box sx={{ marginLeft: 'auto', display:{ xs: 'none', md: 'block' }, px: {xs: 'none', xl: 18} }}>
                 <Button sx={{ mr: 2, color: '#fff' }} component={Link}>Log in</Button>
                 <Button disableRipple sx={{ borderRadius: 32, boxShadow: 'none', color: '#000', mr: { xs: 2, md: 8}, bgcolor: `${props.mainColor}`, '&:hover': { bgcolor: `${props.mainColor}` } }} variant="contained" component={Link}>SignUp</Button>
             </Box>

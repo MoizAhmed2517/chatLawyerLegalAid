@@ -19,8 +19,8 @@ const Footer = (props) => {
                     <Typography
                     variant="h6"
                     noWrap
-                    component={Link}
-                    to="/"
+                    component="a"
+                    href="/"
                     sx={{
                         mr: 2,
                         display: { xs: 'none', md: 'flex' },

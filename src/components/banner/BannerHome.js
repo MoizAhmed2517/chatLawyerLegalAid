@@ -11,8 +11,9 @@ const BannerHome = () => {
     <Box sx={{
         background: `url(${bannerImage}) center center/cover no-repeat`,
         height: '100%',
-    }}
+        }}
     >
+        
         <Box sx={{
             position: 'absolute',
             top: 0,
@@ -23,7 +24,6 @@ const BannerHome = () => {
             backdropFilter: 'blur(0.2px)', // This will add a blur effect (you can adjust the pixel value)
             zIndex: 2,
         }} />
-
         <Navbar mainColor={mainThemeColor} />
 
 
@@ -57,8 +57,8 @@ const BannerHome = () => {
             </Box>
 
             <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
-                <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>SignUp</Button>
-                <Button sx={{ position: 'relative', zIndex: 2, color: '#fff', borderColor: `${mainThemeColor}`,}} variant="outlined" size="large" fullWidth>SignUp</Button>
+                <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>Start Free</Button>
+                <Button sx={{ position: 'relative', zIndex: 2, color: '#fff', borderColor: `${mainThemeColor}`, width: '200px', '&:hover': { borderColor: `${mainThemeColor}` }}} variant="outlined" size="large" fullWidth>Contact Us</Button>
             </Stack>
         </Box>
 

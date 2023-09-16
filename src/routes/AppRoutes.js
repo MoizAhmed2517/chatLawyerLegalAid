@@ -4,11 +4,23 @@ import React, {useState} from 'react'
 // Third-party components imports
 import { Routes, Route } from 'react-router';
 import Home from '../layout/Home';
+import AboutUs from '../layout/AboutUs';
+import WhyChoose from '../layout/WhyChoose';
+import ProductShowcase from '../layout/ProductShowcase';
+import Pricing from '../layout/Pricing';
+import LiveDemo from '../layout/LiveDemo';
+import ContactUs from '../layout/ContactUs';
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/why-choose-us" element={<WhyChoose />} />
+      <Route path="/product-showcase" element={<ProductShowcase />} />
+      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/live-demo" element={<LiveDemo />} />
+      <Route path="/contact-us" element={<ContactUs />} />
     </Routes>
   )
 }
