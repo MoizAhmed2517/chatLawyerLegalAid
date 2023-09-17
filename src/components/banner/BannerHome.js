@@ -1,6 +1,6 @@
 import { Box, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
-import bannerImage from '../../static/banner/mainbanner7.jpg';
+import bannerImage from '../../static/banner/mainbanner9.jpg';
 import Navbar from '../navbar/Navbar';
 import TypingFont from '../animation/TypingFont';
 
@@ -36,7 +36,7 @@ const BannerHome = () => {
         }}>
 
             
-            <Typography variant="h1" sx={{ fontSize: 80, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Chat-Legal-Aid</Typography>
+            <Typography variant="h1" sx={{ fontSize: 80, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to top, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Chat-Legal-Aid</Typography>
             <Box sx={{ mt: 2 }} />
             <TypingFont mainColor={mainThemeColor} />
             <Box sx={{ mt: 2 }} />

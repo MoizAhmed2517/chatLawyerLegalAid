@@ -40,35 +40,34 @@ const AboutUs = () => {
             pb: 10,
           }}>
 
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>Scrubworx can revolutionize</Typography>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: `${mainThemeColor}` }}>your workflow</Typography>
-          <Typography variant="body1" sx={{ fontWeight: 400, color: `#fff`, mt:1 }}>Scrubworx is your one-stop solution, taking care of everything from uploading documents to extracting and compiling data</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}> <span style={{ color: `${mainThemeColor}` }}>ChatLawyer</span> can revolutionize</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>your <span style={{ color: `${mainThemeColor}` }}>legal</span> practices</Typography>
+          <Typography variant="body1" sx={{ fontWeight: 400, color: `#fff`, mt:1 }}>ChatLawyer is your one-stop solution, assisting you in advising as per you client's requirement</Typography>
 
           <Grid container spacing={2} sx={{ mt: 5 }}>
-          <Grid item xs={6}>
-              <CardStylish heading="Comprehensive Support" content="ChatLegalAid offers comprehensive assistance, from understanding client needs to immediate case assessments." icon={<CloudUploadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
+            <Grid item xs={6}>
+                <CardStylish heading="Comprehensive Support" content="ChatLegalAid offers comprehensive assistance, from understanding client needs to immediate case assessments." icon={<CloudUploadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
 
-          <Grid item xs={6} >
-              <CardStylish heading="Multilingual Accessibility" content="Our platform caters to a diverse clientele by providing support in multiple languages." icon={<TextFieldsIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
+            <Grid item xs={6} >
+                <CardStylish heading="Multilingual Accessibility" content="Our platform caters to a diverse clientele by providing support in multiple languages." icon={<TextFieldsIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
 
-          <Grid item xs={6} mt={3}>
-              <CardStylish heading="Time and Cost Efficiency" content="Streamline your practice and save valuable time and money with our automated tools and efficient processes." icon={<PersonOutlineOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
+            <Grid item xs={6} mt={3}>
+                <CardStylish heading="Time and Cost Efficiency" content="Streamline your practice and save valuable time and money with our automated tools and efficient processes." icon={<PersonOutlineOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
 
-          <Grid item xs={6} mt={3}>
-              <CardStylish heading="Expert Guidance" content="Access accurate and up-to-date legal advice at your fingertips, enhancing the quality of your legal services." icon={<DataSaverOnOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
+            <Grid item xs={6} mt={3}>
+                <CardStylish heading="Expert Guidance" content="Access accurate and up-to-date legal advice at your fingertips, enhancing the quality of your legal services." icon={<DataSaverOnOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
 
-          <Grid item xs={6} mt={3}>
-              <CardStylish heading="Trusted Partnership" content="We are more than a tool; we are your legal partner, dedicated to simplifying the legal process for you and your clients." icon={<SimCardDownloadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
+            <Grid item xs={6} mt={3}>
+                <CardStylish heading="Trusted Partnership" content="We are more than a tool; we are your legal partner, dedicated to simplifying the legal process for you and your clients." icon={<SimCardDownloadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
 
-          <Grid item xs={6} mt={3}>
-              <CardStylish heading="Batch Processing" content="Handle multiple applications efficiently with our automated batch processing" icon={<AccountTreeOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
-          </Grid>
-
+            <Grid item xs={6} mt={3}>
+                <CardStylish heading="Seamless Integration with your website" content="You can integrate via our CDN into your website" icon={<AccountTreeOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+            </Grid>
           </Grid>
 
       </Box>

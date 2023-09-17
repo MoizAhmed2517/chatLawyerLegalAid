@@ -1,13 +1,63 @@
-import { Box, Typography, Stack, Button } from '@mui/material'
+import { Box, Typography, Button, Grid } from '@mui/material'
 import React from 'react'
 import Navbar from '../navbar/Navbar';
 import {Link} from 'react-router-dom';
+import { alpha, styled } from '@mui/material/styles';
+import InputBase from '@mui/material/InputBase';
+import InputLabel from '@mui/material/InputLabel';
+import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+
+const CssTextField = styled(TextField)({
+    '& label.Mui-focused': {
+        color: '#A0AAB4',
+    },
+    '& .MuiInput-underline:after': {
+        borderBottomColor: '#585724',
+    },
+    '& .MuiOutlinedInput-root': {
+        '& fieldset': {
+            borderColor: '#585724',
+        },
+        '&:hover fieldset': {
+            borderColor: '#585724',
+        },
+        '&.Mui-focused fieldset': {
+            borderColor: '#585724',
+        },
+    },
+
+    // Styles for the text color to be white
+    '& .MuiInputBase-input': {
+        color: '#fff', // Text color
+    },
+    '& .MuiInputBase-input:hover': {
+        color: '#fff', // Text color on hover
+    },
+    '& .MuiInputBase-input.Mui-focused': {
+        color: '#fff', // Text color on focus
+    },
+    '& .MuiInputBase-input.Mui-active': {
+        color: '#fff', // Text color on active
+    },
+
+    // Style label color to be white when input is not focused
+    '& .MuiFormLabel-root': {
+        color: '#fff', // Label color
+    }
+});
+
+const mainThemeColor = '#fffb62';
 
 const BannerContact = (props) => {
   return (
     <Box sx={{
-        background: `#10100d`,
-        height: '100%',
+        background: `#0c0c0c`,
+        height: '100vh',  // <-- this makes sure the Box takes the full height of the viewport
+        display: 'flex',  // <-- this ensures children can be centered vertically
+        flexDirection: 'column',
+        justifyContent: 'center', // <-- this centers children vertically
+        position: 'relative',
         }}
     >
         
@@ -28,33 +78,43 @@ const BannerContact = (props) => {
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        // pt: {xs: 3, sm: 5, md: 10, lg: 10, xl: 30},
-        py: {xs: 3, sm: 5, md: 10, lg: 20, xl: 40}
-    }}>
-
-        
-        <Typography variant="h1" sx={{ fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Working In Progress. Stay Tuned!</Typography>
-        <Box sx={{ mt: 2 }} />
-
-        
-        <Box sx={{
-            height: 'auto',
-            px: {xs: 2, sm: 5, md: 10, lg: 17, xl: 40},
-            mb : 2,
-            mt: 0.5
         }}>
-            <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontSize: 15, fontFamily: 'Oxygen' }}>
-                At Chat Legal Aid, we've transformed the way divorce lawyers and their clients approach divorce proceedings. 
-                Our AI-powered chatbot is your indispensable legal partner, equipped to provide extensive support, guide clients through the process, 
-                gather crucial information, and even schedule appointments on your behalf. With ChatLegalAid, you have a true ally, streamlining your 
-                practice and ensuring your clients have all the information they need.
-            </Typography>
+
+        
+            <Typography variant="h1" sx={{ fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Contact the Pied Piper team</Typography>
+            <Box sx={{ mt: 2 }} />
+            <Box sx={{
+                height: 'auto',
+                px: {xs: 2, sm: 5, md: 10, lg: 17, xl: 40},
+                mb : 2,
+                mt: 0.5
+            }}>
+                <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontSize: 15, fontFamily: 'Oxygen' }}>
+                We're here to answer your questions and discuss the decentralized future of the internet. Let's talk!
+                </Typography>
+            </Box>
+
         </Box>
 
-        <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
-            <Button sx={{ position: 'relative', zIndex: 2, color: '#fff', borderColor: `${props.mainColor}`, width: '200px', '&:hover': { borderColor: `${props.mainColor}` }}} variant="outlined" size="large" fullWidth component={Link} to="/">Home</Button>
-        </Stack>
-    </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2, px: 40 }}>
+            <Grid container spacing={1} justifyContent="center">
+                <Grid item xs={12} sm={6}>
+                    <CssTextField label="First name" id="firstname" fullWidth />
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <CssTextField label="Last Name" id="Lastname" fullWidth />
+                </Grid>
+                <Grid item xs={12}>
+                    <CssTextField label="Email Address" id="email" fullWidth />
+                </Grid>
+                <Grid item xs={12}>
+                    <CssTextField label="Message" id="message" fullWidth multiline rows={6} />
+                </Grid>
+                <Grid item xs={12}>
+                    <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>Submit</Button>
+                </Grid>
+            </Grid>
+        </Box>
 
     </Box>
 )
