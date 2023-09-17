@@ -1,5 +1,6 @@
 import { Box, Typography, Button, Stack } from '@mui/material'
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const mainThemeColor = '#fffb62';
 
@@ -38,7 +39,7 @@ const Footerbanner = () => {
           alignItems: 'center',
           mt : 8
         }}>
-            <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>Integrate</Button>
+            <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth component={Link} to="/pricing">Get Access</Button>
         </Box>
         
     </Box>

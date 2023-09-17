@@ -3,6 +3,8 @@ import React from 'react'
 import bannerImage from '../../static/banner/mainbanner9.jpg';
 import Navbar from '../navbar/Navbar';
 import TypingFont from '../animation/TypingFont';
+import { Link } from 'react-router-dom';
+
 
 const mainThemeColor = '#fffb62';
 
@@ -57,8 +59,8 @@ const BannerHome = () => {
             </Box>
 
             <Stack direction="row" spacing={3} sx={{ mt: 3 }}>
-                <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>Start Free</Button>
-                <Button sx={{ position: 'relative', zIndex: 2, color: '#fff', borderColor: `${mainThemeColor}`, width: '200px', '&:hover': { borderColor: `${mainThemeColor}` }}} variant="outlined" size="large" fullWidth>Contact Us</Button>
+                <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth component={Link} to="/pricing">Start Free</Button>
+                <Button sx={{ position: 'relative', zIndex: 2, color: '#fff', borderColor: `${mainThemeColor}`, width: '200px', '&:hover': { borderColor: `${mainThemeColor}` }}} variant="outlined" size="large" fullWidth component={Link} to="/contact-us">Contact Us</Button>
             </Stack>
         </Box>
 

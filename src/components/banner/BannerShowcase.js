@@ -48,7 +48,7 @@ const BannerShowcase = (props) => {
                 mt: 0.5
             }}>
                 <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontSize: 15, fontFamily: 'Oxygen' }}>
-                We're here to help you out in integrating the chatbot in tou website. Follow the instructions.
+                We're here to help you out in integrating the chatbot in your website. Follow the instructions.
                 </Typography>
             </Box>
 

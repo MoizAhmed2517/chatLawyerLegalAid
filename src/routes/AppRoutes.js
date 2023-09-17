@@ -10,6 +10,8 @@ import ProductShowcase from '../layout/ProductShowcase';
 import Pricing from '../layout/Pricing';
 import LiveDemo from '../layout/LiveDemo';
 import ContactUs from '../layout/ContactUs';
+import SignIn from '../navigation/SignIn';
+import SignUp from '../navigation/SignUp';
 
 const AppRoutes = () => {
   return (
@@ -21,6 +23,8 @@ const AppRoutes = () => {
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/live-demo" element={<LiveDemo />} />
       <Route path="/contact-us" element={<ContactUs />} />
+      <Route path="/login" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp /> } />
     </Routes>
   )
 }

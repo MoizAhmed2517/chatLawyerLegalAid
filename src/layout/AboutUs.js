@@ -9,6 +9,7 @@ import DataSaverOnOutlinedIcon from '@mui/icons-material/DataSaverOnOutlined';
 import SimCardDownloadOutlinedIcon from '@mui/icons-material/SimCardDownloadOutlined';
 import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import Footer from './Footer';
+import { Link } from 'react-router-dom';
 
 const mainThemeColor = '#fffb62';
 
@@ -101,7 +102,7 @@ const AboutUs = () => {
             zIndex: 2,
             position: 'relative',
         }}>
-        <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#fff', borderColor: `${mainThemeColor}`, width: '200px', '&:hover': { borderColor: `${mainThemeColor}`, background: `#10100d` } }} variant="outlined" size="large" fullWidth>Learn More</Button>
+        <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#fff', borderColor: `${mainThemeColor}`, width: '200px', '&:hover': { borderColor: `${mainThemeColor}`, background: `#10100d` } }} variant="outlined" size="large" fullWidth component={Link} to="/pricing">Learn More</Button>
         </Box>
 
         <Box sx={{

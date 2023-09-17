@@ -37,7 +37,7 @@ const Footer = (props) => {
                     <Stack direction="row" spacing={0.6} sx={{ mt: 0.8 }}>
     
                         <Typography variant="body2" align="center" sx={{ color: '#fff' }}>{'Copyright © '}</Typography>
-                        <Typography variant='body2' align='center' sx={{ color: `${props.mainColor}`, fontWeight: 300, }} component={Link} to="/"> ChatLawyer</Typography>
+                        <Typography variant='body2' align='center' sx={{ color: `${props.mainColor}`, fontWeight: 300, }} component="a" href="/"> ChatLegalAid</Typography>
                         <Typography variant="body2" align="center" sx={{ color: '#fff'}}>{new Date().getFullYear()}</Typography>
     
                     </Stack>

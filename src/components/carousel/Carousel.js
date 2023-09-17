@@ -4,12 +4,14 @@ import listItemImage1 from '../../static/listImage/1.png';
 import listItemImage2 from '../../static/listImage/2.png';
 
 const mainThemeColor = '#fffb62';
-const dummyText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+const stepOne = "Find plan that aligns with the specific needs for AI legal chatbot"
+const stepTwo = "Regardless of whether your website is built on WordPress, JavaScript, or HTML, our CDN integration allows for effortless integration of an AI chatbot."
+const stepThree = "Personalize the theme settings to enhance your user experience, and relish the seamless integration of an AI-driven legal chatbot."
 
 const data = [
-    {id: '1', heading: 'Connect to your source', text: dummyText, image: listItemImage1},
-    {id: '2', heading: 'Connect to your source', text: dummyText, image: listItemImage2},
-    {id: '3', heading: 'Connect to your source', text: dummyText, image: listItemImage1},
+    {id: '1', heading: 'Plan for an AI Legal Chatbot', text: stepOne, image: listItemImage1},
+    {id: '2', heading: 'AI Chatbot Integration Across Multiple Web Platforms', text: stepTwo, image: listItemImage2},
+    {id: '3', heading: 'Theme customization for AI Legal Chatbot', text: stepThree, image: listItemImage1},
 ]
 
 const Carousel = () => {
@@ -61,10 +63,10 @@ const Carousel = () => {
                     <Grid item xs={10}>
                         <Stack direction="column" spacing={0.2}>
                             <Typography variant="h5" sx={{ fontSize: 30, fontWeight: 450, font: 'Oxygen', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to top, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text' }}>
-                                Connect to your source
+                                {item.heading}
                             </Typography>
                             <Typography variant="body" sx={{ fontWeight: 400, letterSpacing: '0.5px', fontSize: 12, color: '#fff', font: 'Oxygen', textAlign: 'justify' }}>
-                                {dummyText}
+                                {item.text}
                             </Typography>
                         </Stack>
                     </Grid>

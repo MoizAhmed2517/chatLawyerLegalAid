@@ -7,6 +7,7 @@ import CardSimple from '../components/card/CardSimple';
 import Footer from './Footer';
 import Carousel from '../components/carousel/Carousel';
 import Footerbanner from '../components/banner/Footerbanner';
+import { Link } from 'react-router-dom';
 
 const mainThemeColor = '#fffb62';
 
@@ -44,7 +45,7 @@ const Home = () => {
           justifyContent: 'center',
           alignItems: 'center',
         }}>
-            <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth>Learn More</Button>
+            <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth component={Link} to="/product-showcase">Learn More</Button>
         </Box>
       
       </Box>

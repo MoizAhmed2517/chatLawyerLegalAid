@@ -192,8 +192,8 @@ const Navbar = (props) => {
             </Box>
 
             <Box sx={{ marginLeft: 'auto', display:{ xs: 'none', md: 'block' }, px: {xs: 'none', xl: 18} }}>
-                <Button sx={{ mr: 2, color: '#fff' }} component={Link}>Log in</Button>
-                <Button disableRipple sx={{ borderRadius: 32, boxShadow: 'none', color: '#000', mr: { xs: 2, md: 8}, bgcolor: `${props.mainColor}`, '&:hover': { bgcolor: `${props.mainColor}` } }} variant="contained" component={Link}>SignUp</Button>
+                <Button sx={{ mr: 2, color: '#fff' }} component={Link} to="/login">Log in</Button>
+                <Button disableRipple sx={{ borderRadius: 32, boxShadow: 'none', color: '#000', mr: { xs: 2, md: 8}, bgcolor: `${props.mainColor}`, '&:hover': { bgcolor: `${props.mainColor}` } }} variant="contained" component={Link} to="/signup">SignUp</Button>
             </Box>
 
             
