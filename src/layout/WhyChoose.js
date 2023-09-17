@@ -12,10 +12,10 @@ import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import Footer from './Footer';
 
 // Icons
-import ContentPasteIcon from '@mui/icons-material/ContentPaste';
-import ShapeLineOutlinedIcon from '@mui/icons-material/ShapeLineOutlined';
-import AltRouteOutlinedIcon from '@mui/icons-material/AltRouteOutlined';
-import ConnectedTvOutlinedIcon from '@mui/icons-material/ConnectedTvOutlined';
+import InsightsIcon from '@mui/icons-material/Insights';
+import GTranslateIcon from '@mui/icons-material/GTranslate';
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import GavelIcon from '@mui/icons-material/Gavel';
 
 const mainThemeColor = '#fffb62';
 
@@ -51,21 +51,21 @@ const WhyChoose = () => {
             }}>
 
                 <Grid container spacing={8}>
-                    <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<ContentPasteIcon sx={{ height: 80, width: 80 }} />} text="Generate Content" />
+                    <Grid item xs={12} md={3}>
+                        <CardHoverIcon icon={<InsightsIcon sx={{ height: 80, width: 80 }} />} text="Understand Your Client's Needs" descr="Gain valuable insights into your client's requirements using our user dashboard" />
                     </Grid>
-                    <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<ShapeLineOutlinedIcon sx={{ height: 80, width: 80 }} />} text="Auto post content" />
+                    <Grid item xs={12} md={3}>
+                        <CardHoverIcon icon={<GavelIcon sx={{ height: 80, width: 80 }} />} text="Save Time and Money" descr="Efficiently manage appointments, streamline document preparation, and answer client queries, ultimately saving you valuable time and resources." />
                     </Grid>
-                    <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<AltRouteOutlinedIcon sx={{ height: 80, width: 80 }} />} text="Track competitor" />
+                    <Grid item xs={12} md={3}>
+                        <CardHoverIcon icon={<GTranslateIcon sx={{ height: 80, width: 80 }} />} text="Multilingual Assistance" descr="ChatLegalAid offers support in multiple languages, ensuring accessibility for a diverse client base" />
                     </Grid>
-                    <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<ConnectedTvOutlinedIcon sx={{ height: 80, width: 80 }} />} text="Trending Topic" />
+                    <Grid item xs={12} md={3}>
+                        <CardHoverIcon icon={<AddTaskIcon sx={{ height: 80, width: 80 }} />} text="Immediate Assessment" descr="Receive real-time case assessments, allowing you to make informed decisions promptly" />
                     </Grid>
-                    <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<ConnectedTvOutlinedIcon sx={{ height: 80, width: 80 }} />} text="Trending Topic" />
-                    </Grid>
+                    {/* <Grid item xs={12} md={2.4}>
+                        <CardHoverIcon icon={<ConnectedTvOutlinedIcon sx={{ height: 80, width: 80 }} />} text="AI-powered" descr="This revised version emphasizes the extensive support that ChatLegalAid provides, including understanding client needs, saving time and resources, multilingual assistance, and immediate case assessments" />
+                    </Grid> */}
                 </Grid>
 
             </Box>

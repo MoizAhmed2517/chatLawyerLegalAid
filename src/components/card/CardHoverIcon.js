@@ -50,9 +50,7 @@ const CardHoverIcon = (props) => {
                 {props.text}
             </Typography>
             <Typography variant='button' sx={{ textAlign: 'center', fontSize: 12, color: '#fff', textTransform: 'none', font: "Oxygen", fontWeight: 300, }}>
-            Efficiently manage appointments, streamline document preparation, and answer client queries, ultimately  
-                saving you valuable time and resources.
-
+            {props.descr}
             </Typography>
         </Box>
     );
