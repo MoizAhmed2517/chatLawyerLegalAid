@@ -81,7 +81,7 @@ const CdnCarousel = () => {
             px: 5,
             overflow: 'scroll'
         }}>
-            <Tooltip title={copyStatus} sx={{ position: 'absolute', top: 10, right: 40, zIndex: 2 }}>
+            <Tooltip title={copyStatus} sx={{ position: 'absolute', top: 10, right: 22, zIndex: 2 }}>
                 <IconButton onClick={() => handleCopyClick(htmlCode)}>
                     <ContentCopyIcon sx={{ color: '#5e5c5c', '&:hover': { color: '#fff' } }} />
                 </IconButton>

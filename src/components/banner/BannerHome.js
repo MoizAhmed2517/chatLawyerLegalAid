@@ -38,7 +38,7 @@ const BannerHome = () => {
         }}>
 
             
-            <Typography variant="h1" sx={{ fontSize: 80, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to top, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Chat-Legal-Aid</Typography>
+            <Typography variant="h1" sx={{ fontSize: 80, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to top, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Chat-Legal-Bot</Typography>
             <Box sx={{ mt: 2 }} />
             <TypingFont mainColor={mainThemeColor} />
             <Box sx={{ mt: 2 }} />
@@ -53,7 +53,7 @@ const BannerHome = () => {
                 <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontSize: 15, fontFamily: 'Oxygen' }}>
                     At Chat Legal Aid, we've transformed the way divorce lawyers and their clients approach divorce proceedings. 
                     Our AI-powered chatbot is your indispensable legal partner, equipped to provide extensive support, guide clients through the process, 
-                    gather crucial information, and even schedule appointments on your behalf. With ChatLegalAid, you have a true ally, streamlining your 
+                    gather crucial information, and even schedule appointments on your behalf. With ChatLegalBot, you have a true ally, streamlining your 
                     practice and ensuring your clients have all the information they need.
                 </Typography>
             </Box>

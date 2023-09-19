@@ -8,7 +8,7 @@ import CardPrice from '../card/CardPrice';
 const proffesionalPlan = [
     'Personalized Dashboard with client information, case overview, document repository, appointment scheduler, and messaging center',
     'Includes up to 5,000 messages per month (300 chat sessions)',
-    'Comprehensive ChatLegalAid hosting',
+    'Comprehensive ChatLegalBot hosting',
     'Installation, and support',
     'Perfect for those seeking an efficient legal assistant'
 ]
@@ -16,7 +16,7 @@ const proffesionalPlan = [
 const enterprisePlan = [
     'Personalized Dashboard with client information, case overview, document repository, appointment scheduler, and messaging center',
     'Unlimited users and up to 10,000 messages per month (600 chat sessions)',
-    'Full ChatLegalAid hosting',
+    'Full ChatLegalBot hosting',
     'Installation, and support',
     "Ideal for expanding your legal practice's capabilities"
 ];
@@ -87,10 +87,10 @@ const BannerPricing = (props) => {
 
             <Grid container spacing={2}>
                 <Grid item xs={12} md={6}>
-                    <CardPrice title="Professional" plan={proffesionalPlan} />
+                    <CardPrice title="Professional" plan={proffesionalPlan} price="149" />
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <CardPrice title="Enterprise" plan={enterprisePlan} />
+                    <CardPrice title="Enterprise" plan={enterprisePlan} price="299" />
                 </Grid>
             </Grid>
 

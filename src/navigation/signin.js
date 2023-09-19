@@ -6,16 +6,16 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import PsychologyIcon from '@mui/icons-material/Psychology';
 import { Link } from "react-router-dom";
 import { Stack } from '@mui/material';
 import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import logo from '../static/logo/WhiteMiddleDark.png';
 
 function Copyright(props) {
     return (
         <Stack direction="row" spacing={0.5} sx={{ display: 'flex', justifyContent: 'center', mt: 5 }}>
             <Typography variant="body2" align="center" {...props} sx={{ color: '#fff', mt: 6 }}>{'Copyright © '}</Typography>
-            <Typography variant='subtitle2' align='center' sx={{ color:'#fffb62', fontWeight: 300, }} component={Link} to="/"> ChatLegalAid</Typography>
+            <Typography variant='subtitle2' align='center' sx={{ color:'#fffb62', fontWeight: 300, }} component={Link} to="/"> ChatLegalBot</Typography>
             <Typography variant="body2" align="center" {...props} sx={{ color: '#fff', mt: 6 }}>{new Date().getFullYear()}</Typography>
         </Stack>
     );
@@ -53,19 +53,25 @@ const SignIn = () => {
 
                 <Box
                     sx={{
-                    mt: 5,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: 'center',
                     }}
                 >
-                    <Box component={Link} to="/">
-                        <HeadsetMicIcon sx={{ color: '#fff', width: 60, height: 60, mb: 1.5, color: "#fffb62" }} />
-                    </Box>
+                    <Link to="/">
+                    <Box
+                        component="img"
+                        sx={{
+                            height: '180px', // Set the height of the logo as needed
+                        }}
+                        alt="Wavelogo"
+                        src={logo}
+                        />
+                    </Link>
 
-                    <Typography variant="h5" sx={{ color:'#fffb62', fontWeight: 500, }}>
-                    Sign in to ChatLegalAid
+                    <Typography variant="h5" sx={{ color:'#fffb62', fontWeight: 500, mt: -5 }}>
+                    Sign in to ChatLegalBot
                     </Typography>
 
                     <Box 
@@ -191,7 +197,7 @@ const SignIn = () => {
                     >
 
                         <Stack direction="row" spacing={0.5}>
-                            <Typography variant='subtitle2' align='center' sx={{ color:'#fff', fontWeight: 300, }}>New to ChatLegalAid? </Typography>
+                            <Typography variant='subtitle2' align='center' sx={{ color:'#fff', fontWeight: 300, }}>New to ChatLegalBot? </Typography>
                             <Typography variant='subtitle2' align='center' sx={{ color:'#fffb62', fontWeight: 300, }} component={Link} to="/signup"> Create an account</Typography>
                         </Stack>
 

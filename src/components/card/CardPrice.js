@@ -20,7 +20,7 @@ const mainThemeColor = '#fffb62';
 const proffesionalPlan = [
     'Personalized Dashboard with client information, case overview, document repository, appointment scheduler, and messaging center',
     'Includes up to 5,000 messages per month (averaging 300 chat sessions)',
-    'Comprehensive ChatLegalAid hosting',
+    'Comprehensive ChatLegalBot hosting',
     'Installation, and support',
     'Perfect for those seeking an efficient legal assistant'
 ]
@@ -44,7 +44,7 @@ const CardPrice = (props) => {
 
                 <Typography variant="h5" component="div" sx={{ color: '#fff', fontSize: '40px', fontWeight: 800 }}>
                     <sup style={{ fontWeight: 400, fontSize: 20 }}>$ </sup>
-                    299
+                    {props.price}
                     <sub style={{ fontWeight: 400, fontSize: 12 }}>/month</sub>
                 </Typography>
             </Box>

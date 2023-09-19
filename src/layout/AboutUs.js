@@ -11,6 +11,12 @@ import AccountTreeOutlinedIcon from '@mui/icons-material/AccountTreeOutlined';
 import Footer from './Footer';
 import { Link } from 'react-router-dom';
 
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import TranslateIcon from '@mui/icons-material/Translate';
+import TimerOffIcon from '@mui/icons-material/TimerOff';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
+import GroupsIcon from '@mui/icons-material/Groups';
+
 const mainThemeColor = '#fffb62';
 
 const AboutUs = () => {
@@ -47,23 +53,23 @@ const AboutUs = () => {
 
           <Grid container spacing={2} sx={{ mt: 5 }}>
             <Grid item xs={6}>
-                <CardStylish heading="Comprehensive Support" content="ChatLegalAid offers comprehensive assistance, from understanding client needs to immediate case assessments." icon={<CloudUploadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Comprehensive Support" content="ChatLegalBot offers comprehensive assistance, from understanding client needs to immediate case assessments." icon={<SupportAgentIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} >
-                <CardStylish heading="Multilingual Accessibility" content="Our platform caters to a diverse clientele by providing support in multiple languages." icon={<TextFieldsIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Multilingual Accessibility" content="Our platform caters to a diverse clientele by providing support in multiple languages." icon={<TranslateIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
-                <CardStylish heading="Time and Cost Efficiency" content="Streamline your practice and save valuable time and money with our automated tools and efficient processes." icon={<PersonOutlineOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Time and Cost Efficiency" content="Streamline your practice and save valuable time and money with our automated tools and efficient processes." icon={<TimerOffIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
-                <CardStylish heading="Expert Guidance" content="Access accurate and up-to-date legal advice at your fingertips, enhancing the quality of your legal services." icon={<DataSaverOnOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Expert Guidance" content="Access accurate and up-to-date legal advice at your fingertips, enhancing the quality of your legal services." icon={<PersonAddIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
-                <CardStylish heading="Trusted Partnership" content="We are more than a tool; we are your legal partner, dedicated to simplifying the legal process for you and your clients." icon={<SimCardDownloadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Trusted Partnership" content="We are more than a tool; we are your legal partner, dedicated to simplifying the legal process for you and your clients." icon={<GroupsIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
@@ -91,7 +97,7 @@ const AboutUs = () => {
                   position: 'relative',
               }}>
                   <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>Ready to  <span style={{ color: `${mainThemeColor}` }}>Elevate Your Legal Practice</span></Typography>
-                  <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>with <span style={{ color: `${mainThemeColor}` }}>  ChatLegalAid </span> ?</Typography>
+                  <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>with <span style={{ color: `${mainThemeColor}` }}>  ChatLegalBot </span> ?</Typography>
         </Box>
 
         <Box sx={{
@@ -118,18 +124,7 @@ const AboutUs = () => {
 
       </Box>
 
-      <Box sx={{ 
-        height: 'auto',
-        background: '#10100d',
-        borderTop: '1px solid #0a0a0a',
-        boxShadow: '1px 1px 1px 1px black',
-        px: 17,
-        pt: 3,
-        pb: 2.5,
-      }}>
-          <Footer mainColor={mainThemeColor} />
-          
-      </Box>
+      <Footer mainColor={mainThemeColor} />
 
     </>
   )

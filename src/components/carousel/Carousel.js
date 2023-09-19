@@ -2,6 +2,7 @@ import { Grid, Stack, Typography, Box, Button } from '@mui/material'
 import React, { useState, useEffect } from 'react';
 import listItemImage1 from '../../static/listImage/1.png';
 import listItemImage2 from '../../static/listImage/2.png';
+import AboutVideo from '../video/AboutVideo';
 
 const mainThemeColor = '#fffb62';
 const stepOne = "Find plan that aligns with the specific needs for AI legal chatbot"
@@ -77,18 +78,18 @@ const Carousel = () => {
         </Grid>
 
         <Grid item xs={6}>
-            <Box sx={{ height: 'auto', px: 4}}>
-            <img 
-                src={data[currentIndex].image} 
-                alt="imagelist"  
-                style={{
-                        objectFit: 'contain',
-                        width: '100%',
-                        height: '500px',
-                        transition: 'box-shadow .5s ease-in, border-color .5s ease-in, background-color .5s ease-in, opacity .5s ease-in, filter .5s ease-in'
-                    }} 
-            />
+
+            <Box sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                position: 'relative', 
+                py: {xs: 3, sm: 5, md: 10, lg: 10},
+                px: {xs: 3, sm: 5, md: 10, lg: 2, xl: 10},
+            }}>
+                <AboutVideo />
             </Box>
+
         </Grid>
     </Grid>
   )

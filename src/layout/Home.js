@@ -2,7 +2,10 @@ import React from 'react'
 import BannerHome from '../components/banner/BannerHome';
 import { Box, Grid, Typography, Button } from '@mui/material';
 
-import HandymanOutlinedIcon from '@mui/icons-material/HandymanOutlined';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
+import ShieldIcon from '@mui/icons-material/Shield';
+import AdsClickIcon from '@mui/icons-material/AdsClick';
 import CardSimple from '../components/card/CardSimple';
 import Footer from './Footer';
 import Carousel from '../components/carousel/Carousel';
@@ -35,8 +38,8 @@ const Home = () => {
           alignItems: 'center',
           flexDirection: 'column',
         }}>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>A <span style={{ color: `${mainThemeColor}` }}>delightful experience</span></Typography>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>waiting for you. Get <span style={{ color: `${mainThemeColor}` }}> premium access </span> today!</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>Accelerate your  <span style={{ color: `${mainThemeColor}` }}>Legal Practices </span></Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>in just <span style={{ color: `${mainThemeColor}` }}> Three </span> simple steps</Typography>
         </Box>
         <Carousel />
 
@@ -44,6 +47,7 @@ const Home = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
+          mt: 3,
         }}>
             <Button sx={{ position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth component={Link} to="/product-showcase">Learn More</Button>
         </Box>
@@ -65,22 +69,22 @@ const Home = () => {
           alignItems: 'center',
           flexDirection: 'column',
         }}>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>A <span style={{ color: `${mainThemeColor}` }}>delightful experience</span></Typography>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>waiting for you. Get <span style={{ color: `${mainThemeColor}` }}> premium access </span> today!</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}>A <span style={{ color: `${mainThemeColor}` }}>Delightful Experience</span></Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>waiting for you. Get <span style={{ color: `${mainThemeColor}` }}> Premium Access </span> today!</Typography>
         </Box>
 
         <Grid container spacing={2} sx={{ mt: 5 }}>
           <Grid item xs={3}>
-            <CardSimple heading="Efficiency" content="Reduce manual work and increase productivity." icon={<HandymanOutlinedIcon sx={{ color: '#fff' }} />} />
+            <CardSimple heading="Efficiency" content="Boost productivity and minimize manual tasks with ChatLegalBot." icon={<StackedLineChartIcon sx={{ color: '#fff' }} />} />
           </Grid>
           <Grid item xs={3}>
-            <CardSimple heading="Efficiency" content="Reduce manual work and increase productivity." icon={<HandymanOutlinedIcon sx={{ color: '#fff' }} />} />
+            <CardSimple heading="Accuracy" content="Guarantee meticulous data handling and compilation with ChatLegalBot." icon={<AdsClickIcon sx={{ color: '#fff' }} />} />
           </Grid>
           <Grid item xs={3}>
-            <CardSimple heading="Efficiency" content="Reduce manual work and increase productivity." icon={<HandymanOutlinedIcon sx={{ color: '#fff' }} />} />
+            <CardSimple heading="Security" content="Rest easy with ChatLegalBot's commitment to data security and privacy compliance." icon={<ShieldIcon sx={{ color: '#fff' }} />} />
           </Grid>
           <Grid item xs={3}>
-            <CardSimple heading="Efficiency" content="Reduce manual work and increase productivity." icon={<HandymanOutlinedIcon sx={{ color: '#fff' }} />} />
+            <CardSimple heading="User-Friendly" content="Simplify management with ChatLegalBot's intuitive admin interface." icon={<Diversity3Icon sx={{ color: '#fff' }} />} />
           </Grid>
         </Grid>
       
@@ -88,18 +92,7 @@ const Home = () => {
 
       <Footerbanner />
 
-      <Box sx={{ 
-        height: 'auto',
-        background: '#10100d',
-        borderTop: '1px solid #0a0a0a',
-        boxShadow: '1px 1px 1px 1px black',
-        px: 17,
-        pt: 3,
-        pb: 2.5,
-      }}>
-          <Footer mainColor={mainThemeColor} />
-          
-      </Box>
+      <Footer mainColor={mainThemeColor} />
 
       
 

@@ -16,6 +16,10 @@ import InsightsIcon from '@mui/icons-material/Insights';
 import GTranslateIcon from '@mui/icons-material/GTranslate';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import GavelIcon from '@mui/icons-material/Gavel';
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
+import ShieldIcon from '@mui/icons-material/Shield';
+import AdsClickIcon from '@mui/icons-material/AdsClick';
 
 const mainThemeColor = '#fffb62';
 
@@ -44,7 +48,11 @@ const WhyChoose = () => {
       >
 
           <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}> Why Choose  <span style={{ color: `${mainThemeColor}` }}>ALLY-IN-LAW</span> ?</Typography>
-          <Typography variant="body1" sx={{ fontWeight: 400, color: `#fff`, mt:1 }}>Some text description will be added by George Here</Typography>
+          <Typography variant="body2" sx={{ fontWeight: 400, color: `#fff`, mt:1, textAlign: 'center' }}>
+          A legal chatbot is essential for lawyers as it helps understand client needs, saves time and money by streamlining tasks,
+          offers multilingual support for a wider client base, and provides immediate case assessments for informed decision-making, 
+          all of which significantly enhance a lawyer's practice.
+          </Typography>
 
           <Box sx={{
                 mt: 4,
@@ -58,13 +66,13 @@ const WhyChoose = () => {
                         <CardHoverIcon icon={<GavelIcon sx={{ height: 80, width: 80 }} />} text="Save Time and Money" descr="Efficiently manage appointments, streamline document preparation, and answer client queries, ultimately saving you valuable time and resources." />
                     </Grid>
                     <Grid item xs={12} md={3}>
-                        <CardHoverIcon icon={<GTranslateIcon sx={{ height: 80, width: 80 }} />} text="Multilingual Assistance" descr="ChatLegalAid offers support in multiple languages, ensuring accessibility for a diverse client base" />
+                        <CardHoverIcon icon={<GTranslateIcon sx={{ height: 80, width: 80 }} />} text="Multilingual Assistance" descr="ChatLegalBot offers support in multiple languages, ensuring accessibility for a diverse client base" />
                     </Grid>
                     <Grid item xs={12} md={3}>
                         <CardHoverIcon icon={<AddTaskIcon sx={{ height: 80, width: 80 }} />} text="Immediate Assessment" descr="Receive real-time case assessments, allowing you to make informed decisions promptly" />
                     </Grid>
                     {/* <Grid item xs={12} md={2.4}>
-                        <CardHoverIcon icon={<ConnectedTvOutlinedIcon sx={{ height: 80, width: 80 }} />} text="AI-powered" descr="This revised version emphasizes the extensive support that ChatLegalAid provides, including understanding client needs, saving time and resources, multilingual assistance, and immediate case assessments" />
+                        <CardHoverIcon icon={<ConnectedTvOutlinedIcon sx={{ height: 80, width: 80 }} />} text="AI-powered" descr="This revised version emphasizes the extensive support that ChatLegalBot provides, including understanding client needs, saving time and resources, multilingual assistance, and immediate case assessments" />
                     </Grid> */}
                 </Grid>
 
@@ -90,36 +98,25 @@ const WhyChoose = () => {
 
           <Grid container spacing={2} sx={{ mt: 5 }}>
             <Grid item xs={6}>
-                <CardStylish heading="Efficiency" content="Boost productivity and minimize manual tasks with ChatLegalAid" icon={<CloudUploadOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Efficiency" content="Boost productivity and minimize manual tasks with ChatLegalBot" icon={<StackedLineChartIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} >
-                <CardStylish heading="Accuracy" content="Guarantee meticulous data handling and compilation with ChatLegalAid" icon={<TextFieldsIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Accuracy" content="Guarantee meticulous data handling and compilation with ChatLegalBot" icon={<AdsClickIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
-                <CardStylish heading="Security" content="Rest easy with ChatLegalAid's commitment to data security and privacy compliance" icon={<PersonOutlineOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="Security" content="Rest easy with ChatLegalBot's commitment to data security and privacy compliance" icon={<ShieldIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
 
             <Grid item xs={6} mt={3}>
-                <CardStylish heading="User-Friendly" content="Simplify management with ChatLegalAid's intuitive admin interface" icon={<DataSaverOnOutlinedIcon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
+                <CardStylish heading="User-Friendly" content="Simplify management with ChatLegalBot's intuitive admin interface" icon={<Diversity3Icon sx={{ widht: 25, height: 25, color: '#fffb62' }} />} />
             </Grid>
           </Grid>
 
       </Box>
 
-      <Box sx={{ 
-        height: 'auto',
-        background: '#10100d',
-        borderTop: '1px solid #0a0a0a',
-        boxShadow: '1px 1px 1px 1px black',
-        px: 17,
-        pt: 3,
-        pb: 2.5,
-      }}>
-          <Footer mainColor={mainThemeColor} />
-          
-      </Box>
+      <Footer mainColor={mainThemeColor} />
 
     </>
   )

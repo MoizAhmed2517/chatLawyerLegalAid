@@ -37,7 +37,7 @@ const BannerAboutus = ({ scrollToSection }) => {
                         <Typography variant="h1" sx={{ fontSize: 60, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${mainThemeColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Simplifying Legal Landscape</Typography>
                         <Box sx={{ mt: 2 }} />
                         <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, fontSize: 15, fontFamily: 'Oxygen', textAlign: 'justify' }}>
-                            At ChatLegalAid, we are passionate about leveraging technology to simplify the legal landscape. 
+                            At ChatLegalBot, we are passionate about leveraging technology to simplify the legal landscape. 
                             Our team of legal experts and AI enthusiasts has come together to create a revolutionary chatbot designed 
                             to transform the way divorce lawyers and their clients navigate the complexities of divorce proceedings.
                             With a commitment to accessibility, efficiency, and legal excellence, we are your trusted partner 
@@ -65,7 +65,7 @@ const BannerAboutus = ({ scrollToSection }) => {
             }}
             onClick={scrollToSection}
             >
-                <ExpandCircleDownOutlinedIcon className='bounce' sx={{ height: 70, width: 70, color: '#FFFFFF', zIndex: 2, position: 'relative' }}/>
+                <ExpandCircleDownOutlinedIcon className='bounce' sx={{ height: 70, width: 70, color: `${mainThemeColor}`, zIndex: 2, position: 'relative' }}/>
             </Box>
 
         </Box>

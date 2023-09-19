@@ -34,7 +34,7 @@ const BannerChoose = (props) => {
             }}>
 
                 
-                <Typography variant="h1" sx={{ fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato', textAlign: 'center' }}>ChatLegalAid Can Revolutionize Your Legal Practice</Typography>
+                <Typography variant="h1" sx={{ fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato', textAlign: 'center' }}>ChatLegalBot Can Revolutionize Your Legal Practice</Typography>
                 <Box sx={{ mt: 2 }} />
 
                 
@@ -45,9 +45,9 @@ const BannerChoose = (props) => {
                     mt: 0.5
                 }}>
                     <Typography variant='body1'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontSize: 15, fontFamily: 'Oxygen' }}>
-                    ChatLegalAid is your all-in-one solution for divorce law. Our AI-driven chatbot combines cutting-edge technology with legal expertise to 
+                    ChatLegalBot is your all-in-one solution for divorce law. Our AI-driven chatbot combines cutting-edge technology with legal expertise to 
                     provide a seamless experience for lawyers and clients alike. From real-time case assessments and multilingual support to document preparation
-                    and appointment scheduling, ChatLegalAid streamlines every aspect of the divorce process. Say goodbye to the complexities and hello to a more 
+                    and appointment scheduling, ChatLegalBot streamlines every aspect of the divorce process. Say goodbye to the complexities and hello to a more 
                     efficient and cost-effective legal journey
                     </Typography>
                 </Box>

@@ -16,7 +16,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 
 // Icon
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import logo from '../../static/logo/WhiteMiddleDark.png'
 
 function ElevationScroll(props) {
     const { children, window } = props;
@@ -94,30 +94,24 @@ const Navbar = (props) => {
     <React.Fragment>
       <CssBaseline />
       <ElevationScroll {...props}>
-        <AppBar position="fixed" sx={{ backgroundColor: scrolled ? '#0a0a0a' : 'transparent' }}>
+        <AppBar position="fixed" sx={{ backgroundColor: scrolled ? '#0a0a0a' : 'transparent', height: '60px' }}>
           <Toolbar>
             
             {/* App bar main icon -- desktop */}
-            <Typography
-                    variant="h5"
-                    component="a"
-                    href="/"
-                    noWrap
-                    sx={{
-                    ml: 8,
-                    display: { xs: 'none', md: 'flex' },
-                    fontFamily: 'monospace',
-                    fontWeight: 1000,
-                    letterSpacing: '.2rem',
-                    color: `${props.mainColor}`,
-                    textDecoration: 'none',
-                    px: {xs: 'none', xl: 10}
+            <Link to="/">
+              <Box
+                component="img"
+                sx={{
+                    height: "153px",
+                    px: {xs: 5.5, xl: 16},
+                    display: { xs: 'flex', color: '#000' },
                 }}
-            >
-                CHATBOT LOGO
-            </Typography>
+                alt="Wavelogo"
+                src={logo}
+            />
+          </Link>
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, alignContent: 'center', justifyContent: 'center' }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'none', lg: 'flex' }, alignContent: 'center', justifyContent: 'center' }}>
               {pages.map((page, index) => (
                   <React.Fragment key={index}>
                     <Button
@@ -132,29 +126,7 @@ const Navbar = (props) => {
               ))}
             </Box>
 
-            {/* App bar main icon -- mobile */}
-            <Typography
-              variant="h5"
-              component="a"
-              href="/"
-              noWrap
-              sx={{
-                ml: 2,
-                display: { xs: 'flex', md: 'none' },
-                justifyContent: 'center',
-                alignContent: 'center',
-                textAlign: 'center',
-                fontFamily: 'monospace',
-                fontWeight: 1000,
-                letterSpacing: '.2rem',
-                color: `${props.mainColor}`,
-                textDecoration: 'none',
-              }}
-            >
-              CHATBOT LOGO
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end', alignItems: "flex-end" }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', lg: 'none' }, justifyContent: 'flex-end', alignItems: "flex-end", mr: 3, mt: 1 }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -191,10 +163,10 @@ const Navbar = (props) => {
               </Menu>
             </Box>
 
-            <Box sx={{ marginLeft: 'auto', display:{ xs: 'none', md: 'block' }, px: {xs: 'none', xl: 18} }}>
+            <Box sx={{ marginLeft: 'auto', display:{ xs: 'none', lg: 'block' }, px: {xs: 'none', xl: 18} }}>
                 <Button sx={{ mr: 2, color: '#fff' }} component={Link} to="/login">Log in</Button>
                 <Button disableRipple sx={{ borderRadius: 32, boxShadow: 'none', color: '#000', mr: { xs: 2, md: 8}, bgcolor: `${props.mainColor}`, '&:hover': { bgcolor: `${props.mainColor}` } }} variant="contained" component={Link} to="/signup">SignUp</Button>
-            </Box>
+            </Box> 
 
             
           </Toolbar>

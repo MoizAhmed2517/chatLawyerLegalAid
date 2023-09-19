@@ -35,8 +35,8 @@ const CardSimple = (props) => {
             {props.icon}
         </Box>
 
-        <Typography variant='body2' sx={{ mt: 2, fontWeight: 600, color: '#fff' }}>{props.heading}</Typography>
-        <Typography variant="caption"  sx={{ mt: 0.5, fontWeight: 400, color: '#9da8b7' }}>{props.content}</Typography>
+        <Typography variant='body1' sx={{ mt: 2, fontWeight: 600, color: '#fff' }}>{props.heading}</Typography>
+        <Typography variant="subtitle2"  sx={{ mt: 0.5, fontWeight: 300, color: '#c1c1c1', fontFamily: 'Oxygen' }}>{props.content}</Typography>
         
     </Box>
   )

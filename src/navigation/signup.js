@@ -12,12 +12,13 @@ import { Stack } from '@mui/material';
 import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import '../App.css'
+import logo from '../static/logo/WhiteMiddleDark.png';
 
 function Copyright(props) {
     return (
         <Stack direction="row" spacing={0.5} sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
             <Typography variant="body2" align="center" {...props} sx={{ color: '#fff', mt: 6 }}>{'Copyright © '}</Typography>
-            <Typography variant='subtitle2' align='center' sx={{ color:'#fffb62', fontWeight: 300, }} component={Link} to="/"> ChatLegalAid</Typography>
+            <Typography variant='subtitle2' align='center' sx={{ color:'#fffb62', fontWeight: 300, }} component={Link} to="/"> ChatLegalBot</Typography>
             <Typography variant="body2" align="center" {...props} sx={{ color: '#fff', mt: 6 }}>{new Date().getFullYear()}</Typography>
         </Stack>
     );
@@ -55,19 +56,26 @@ const SignUp = () => {
 
                     <Box
                         sx={{
-                        mt: 1,
+                        mt: -5.5,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         justifyContent: 'center',
                         }}
                     >
-                        <Box component={Link} to="/">
-                            <HeadsetMicIcon sx={{ color: '#fff', width: 60, height: 60, mb: 1, color:'#fffb62' }} />
-                        </Box>
+                        <Link to="/">
+                            <Box
+                                component="img"
+                                sx={{
+                                    height: '180px', // Set the height of the logo as needed
+                                }}
+                                alt="Wavelogo"
+                                src={logo}
+                                />
+                        </Link>
 
-                        <Typography variant="h5" sx={{ color:'#fffb62', fontWeight: 500, }}>
-                            Sign up for ChatLegalAid
+                        <Typography variant="h5" sx={{ color:'#fffb62', fontWeight: 500, mt: -6 }}>
+                            Sign up for ChatLegalBot
                         </Typography>
 
                         <Box 

@@ -11,7 +11,7 @@ const BannerShowcase = (props) => {
   return (
     <Box sx={{
         background: `#0c0c0c`,
-        height: '100vh',  // <-- this makes sure the Box takes the full height of the viewport
+        height: '120vh',  // <-- this makes sure the Box takes the full height of the viewport
         display: 'flex',  // <-- this ensures children can be centered vertically
         flexDirection: 'column',
         justifyContent: 'center', // <-- this centers children vertically
@@ -33,13 +33,11 @@ const BannerShowcase = (props) => {
 
         <Box sx={{ 
           height: 'auto',
-          background: '#0c0c0c',
-          borderTop: '1px solid #0a0a0a',
           px: 20,
         }}
         >
 
-            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Intergate ChatLegalAid In Your Site</Typography>
+            <Typography variant="h1" sx={{ textAlign: 'center', fontSize: 50, position: 'relative', WebkitTextFillColor: 'transparent', backgroundImage: `linear-gradient(to right, ${props.mainColor}, #b1b1b1)`, WebkitBackgroundClip: 'text', zIndex: 2, fontFamily: 'Lato' }}>Intergate ChatLegalBot In Your Site</Typography>
             <Box sx={{ mt: 2 }} />
             <Box sx={{
                 height: 'auto',
@@ -56,6 +54,22 @@ const BannerShowcase = (props) => {
 
           <CdnCarousel />
 
+        </Box>
+
+        <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: 'auto',
+            flexDirection: 'column',
+            mt: 4,
+            px: 20,
+          }}
+        >
+          <Typography variant='h6'sx={{ position: 'relative', color: '#fff', zIndex: 2, textAlign: 'center', fontFamily: 'Oxygen' }}>
+          Need help installing ChatLegalBot on your website? Schedule an appointment with our support team for expert assistance.
+          </Typography>
+          <Button sx={{ mt: 2, position: 'relative', zIndex: 2, boxShadow: 'none', color: '#000', bgcolor: `${mainThemeColor}`, width: '200px', '&:hover': { bgcolor: `${mainThemeColor}` } }} variant="contained" size="large" fullWidth component={Link} to="/pricing">GET ASSISTANCE</Button>
         </Box>
 
 
