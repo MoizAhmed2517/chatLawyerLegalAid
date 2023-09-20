@@ -92,9 +92,11 @@ const WhyChoose = () => {
             pb: 10,
           }}>
 
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}> <span style={{ color: `${mainThemeColor}` }}>ChatLawyer</span> can revolutionize</Typography>
-          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>your <span style={{ color: `${mainThemeColor}` }}>legal</span> practices</Typography>
-          <Typography variant="body1" sx={{ fontWeight: 400, color: `#fff`, mt:1 }}>ChatLawyer is your one-stop solution, assisting you in advising as per you client's requirement</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff", mt: 2 }}> <span style={{ color: `${mainThemeColor}` }}>ChatLegalBot </span>has the potential</Typography>
+          <Typography variant="h4" sx={{ fontWeight: 650, color: "#fff" }}>to revolutionize the <span style={{ color: `${mainThemeColor}` }}>legal</span> industry.</Typography>
+          <Typography variant="body1" sx={{ fontWeight: 400, color: `#fff`, mt:1 }}>
+            ChatLegalBot serves as your comprehensive solution, aiding you in providing tailored advice to meet your clients' specific needs.
+          </Typography>
 
           <Grid container spacing={2} sx={{ mt: 5 }}>
             <Grid item xs={6}>
