@@ -13,6 +13,8 @@ import GoogleIcon from '@mui/icons-material/Google';
 import MicrosoftIcon from '@mui/icons-material/Microsoft';
 import '../App.css'
 import logo from '../static/logo/WhiteMiddleDark.png';
+import axios from 'axios'
+import { toast } from 'react-toastify';
 
 function Copyright(props) {
     return (
@@ -44,10 +46,23 @@ const SignUp = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
-          email: data.get('email'),
-          password: data.get('password'),
-        });
+        const item = {
+            email: data.get('email'),
+            password: data.get('password'),
+            re_password: data.get('repassword'),
+            username: data.get('username')
+        };
+        axios.post("http://3.109.1.233:8000/auth/users/", item)
+        .then((response) => {
+            toast("Account created successfully", {type: ["success"]})
+        })
+        .catch((err) => {
+            toast("Account creation failed", {type: ["error"]}) 
+            if (err.response.data.password.length !== 0) {
+                toast(err.response.data.password[0], { type: ["error"] })
+            } 
+        }) 
+        
     };
     
     return (
@@ -104,8 +119,8 @@ const SignUp = () => {
                                 margin="normal"
                                 required
                                 fullWidth
-                                id="email"
-                                name="email"
+                                id="usename"
+                                name="username"
                                 size="small"
                                 sx={{ 
                                     mt: 0.3,
@@ -198,9 +213,9 @@ const SignUp = () => {
                                         margin="normal"
                                         required
                                         fullWidth
-                                        type="password"
-                                        id="password"
-                                        name="password"
+                                        type="repassword"
+                                        id="repassword"
+                                        name="repassword"
                                         size="small"
                                         sx={{ 
                                             mt: 0.3,
@@ -230,7 +245,7 @@ const SignUp = () => {
                                 fullWidth
                                 variant="contained"
                                 sx={{ mt: 1, mb: 0.5, background: '#fffb62', color: '#000', '&:hover': { color: '#000', background: '#fffb62' } }}
-                                component={Link}
+                                
                             >
                                 Create Account
                             </Button>

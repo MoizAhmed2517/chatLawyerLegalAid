@@ -3,6 +3,8 @@ import React from 'react';
 
 // Third-party components imports
 import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer, toast, TypeOptions } from "react-toastify";
+import "react-toastify/ReactToastify.min.css";
 
 // Custom component imports
 import AppRoutes from './routes/AppRoutes';
@@ -26,6 +28,18 @@ function App() {
   return (
     <BrowserRouter basename="/">
       <ScrollToTop />
+      <ToastContainer
+        newestOnTop
+        position="bottom-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
       <AppRoutes />
     </BrowserRouter>
   );
