@@ -12,6 +12,7 @@ import LiveDemo from '../layout/LiveDemo';
 import ContactUs from '../layout/ContactUs';
 import SignIn from '../navigation/SignIn';
 import SignUp from '../navigation/SignUp';
+import Dashboard from '../layout/Dashboard';
 
 const AppRoutes = () => {
   return (
@@ -25,6 +26,7 @@ const AppRoutes = () => {
       <Route path="/contact-us" element={<ContactUs />} />
       <Route path="/login" element={<SignIn />} />
       <Route path="/signup" element={<SignUp /> } />
+      <Route path="/dashboard" element={<Dashboard /> } />
     </Routes>
   )
 }
