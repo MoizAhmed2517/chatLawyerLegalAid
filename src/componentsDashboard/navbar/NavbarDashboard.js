@@ -44,6 +44,7 @@ import { Stack } from '@mui/material';
 import Collapse from '@mui/material/Collapse';
 import logo from '../../static/logo/WhiteMiddleDark.png'
 import ForumIcon from '@mui/icons-material/Forum';
+import PersonIcon from '@mui/icons-material/Person';
 
 const drawerWidth = 240;
 
@@ -121,7 +122,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 
 
 const settings = [
-  {name: 'My profile', link: '/my-profile'}, 
+  // {name: 'My profile', link: '/my-profile'}, 
   {name: 'Logout', link: '/login'},
 ];
 
@@ -141,6 +142,8 @@ const NavbarDashboard = (props) => {
   const [activeTabColors, setActiveTabColors] = React.useState(0);
   const [open, setOpen] = React.useState(false);
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+
+  console.log(activeTab)
 
   // State functions and mapping functions
   const handleOpenNavMenu = (event) => {
@@ -273,26 +276,41 @@ const NavbarDashboard = (props) => {
               </Tooltip>
 
               <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-              >
-              {settings.map((setting, index) => (
-                  <MenuItem key={index} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center" component={Link} to={setting.link} sx={{ textDecoration : 'None' }}>{setting.name}</Typography>
-                  </MenuItem>
-              ))}
+                sx={{ mt: '45px',
+                  '.MuiPaper-root':{
+                    background: '#303025',
+                    border: '1px solid #585724',
+                    color: '#fff'
+                  },
+                  '&:active': {
+                    color: '#fff'
+                  }
+              
+                }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }}
+                keepMounted
+                transformOrigin={{
+                    vertical: 'top',
+                    horizontal: 'right',
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+                >
+                {settings.map((setting, index) => (
+                    <MenuItem key={index} onClick={handleCloseUserMenu}>
+                      <ListItemIcon>
+                        <PersonIcon sx={{ color: "#fff" }} />
+                      </ListItemIcon>
+                      <ListItemText>
+                        <Typography textAlign="center" component={Link} to={setting.link} sx={{ textDecoration : 'None', color: "#fff" }}>{setting.name}</Typography>
+                      </ListItemText>
+                    </MenuItem>
+                ))}
               </Menu>
 
           </Box>
@@ -341,7 +359,7 @@ const NavbarDashboard = (props) => {
           </Tooltip>
 
           {/* Survey Tab */}
-          <Tooltip title={"Survey"} placement='bottom-end'>
+          <Tooltip title={"Chat History"} placement='bottom-end'>
             <ListItemButton
                 sx={{
                     minHeight: 48,
@@ -356,7 +374,7 @@ const NavbarDashboard = (props) => {
                     }
                 }}
                 component={Link}
-                to='/survey'
+                to='/chatDetails'
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onMouseMove={handleMouseMove}
@@ -372,44 +390,10 @@ const NavbarDashboard = (props) => {
                 >
                     <ForumIcon />
                 </ListItemIcon>
-                <ListItemText primary="Chat Session" sx={{ opacity: open ? 1 : 0 }} component={Link} to='/survey' />
+                <ListItemText primary="Chat History" sx={{ opacity: open ? 1 : 0 }} component={Link} to='/chatDetails' />
             </ListItemButton>
           </Tooltip>
-
-          {/* Feedback Tab */}
-          <Tooltip title={"Feedback"} placement='bottom-end'>
-            <ListItemButton
-                sx={{
-                    minHeight: 48,
-                    justifyContent: open ? 'initial' : 'center',
-                    px: 2.5,
-                    borderRight: 2 === activeTab ? `3px inset ${activeTabColor[activeTabColors]}` : '',
-                    borderRadius: 0,
-                    mt: 2,
-                    color: 2 === activeTab ? activeTabColor[activeTabColors] : '#ffffff',
-                    '&:hover':{
-                      background: 'rgba(16, 16, 13, 0.8)',
-                    }
-                }}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-                onClick={() => handleExpand(2)}
-                >
-                <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : 'auto',
-                      justifyContent: 'center',
-                      color: 2 === activeTab ? activeTabColor[activeTabColors] : '#ffffff',
-                    }}
-                >
-                    <RunningWithErrorsOutlinedIcon />
-                </ListItemIcon>
-                <ListItemText primary="Feedback" sx={{ opacity: open ? 1 : 0 }} />
-                
-            </ListItemButton>
-          </Tooltip>
+          
         </List>
       </Drawer>
 

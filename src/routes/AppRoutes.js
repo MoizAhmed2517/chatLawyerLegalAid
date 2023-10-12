@@ -13,6 +13,7 @@ import ContactUs from '../layout/ContactUs';
 import SignIn from '../navigation/SignIn';
 import SignUp from '../navigation/SignUp';
 import Dashboard from '../layout/Dashboard';
+import ChatSession from '../layout/ChatSession';
 
 const AppRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const AppRoutes = () => {
       <Route path="/login" element={<SignIn />} />
       <Route path="/signup" element={<SignUp /> } />
       <Route path="/dashboard" element={<Dashboard /> } />
+      <Route path="/chatDetails" element={<ChatSession /> } />
     </Routes>
   )
 }

@@ -171,6 +171,7 @@ const SignIn = () => {
                             variant="contained"
                             sx={{ mt: 3, mb: 2, background: '#fffb62', color: '#000', '&:hover': { color: '#000', background: '#fffb62' } }}
                             component={Link}
+                            to="/dashboard"
 
                         >
                             Sign In

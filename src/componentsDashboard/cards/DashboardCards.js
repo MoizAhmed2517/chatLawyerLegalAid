@@ -18,7 +18,7 @@ import Cookies from 'js-cookie';
 
 const DashboardCards = (props) => {
   return (
-    <Card sx={{ background: '#080804', marginLeft: 1, marginBottom: 2, border: '1px solid #585724', borderRadius: '0.75rem', boxShadow: 'none' }}>
+    <Card sx={{ background: '#30302582', marginLeft: 1, marginBottom: 2, border: '1px solid #585724', borderRadius: '0.75rem', boxShadow: 'none' }}>
       <CardContent >
         <Stack direction="row" alignItems="center" spacing={2}>
           <Box pt={1} px={1} py={1}>

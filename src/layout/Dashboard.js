@@ -13,16 +13,17 @@ import NavbarDashboard from '../componentsDashboard/navbar/NavbarDashboard'
 import DashboardCards from '../componentsDashboard/cards/DashboardCards';
 import MDBarChart from '../componentsDashboard/charts/MDBarChart';
 import MDPieChart from '../componentsDashboard/charts/MDPieChart';
+import ChatTable from '../componentsDashboard/tables/ChatTable';
 
 const Dashboard = () => {
   return (
     <Box sx={{
         background: '#10100d',
-        height: '120vh',
+        height: 'auto',
     
     }}>
         <NavbarDashboard />
-        <Box sx={{ flexGrow: 0, px: 1.5, marginLeft: {xs: 7, md: 8}, marginTop: -3 }}>
+        <Box sx={{ flexGrow: 0, px: 1.5, marginLeft: {xs: 7, md: 8}, marginTop: -4 }}>
 
           <Grid container spacing={0.5}>
             <Grid item xs={12} sm={6} md={3}>
@@ -46,8 +47,13 @@ const Dashboard = () => {
             <Grid item xs={12} sm={12} md={4}>
               <MDPieChart descr="Case Resolved" />
             </Grid>
+            <Grid item xs={12} sm={12} md={12}>
+              <Box sx={{ px: 1 }}>
+                <ChatTable />
+              </Box>
+            </Grid>
           </Grid>
-
+          
         </Box>
     </Box>
   )
